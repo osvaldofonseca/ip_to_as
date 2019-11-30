@@ -1,2 +1,2 @@
-ASN_MAPPING_DB = 'as_mapping.db'
-RESERVED_PREFIXES = 'reserved_prefixes.txt'
+ASN_MAPPING_DB = 'data/as_mapping.db'
+RESERVED_PREFIXES = 'data/reserved_prefixes.txt'
