@@ -6,14 +6,14 @@ HOSTNAME = 'whois.cymru.com'
 def netcat(text_to_send):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(( HOSTNAME, PORT ))
-    s.sendall(text_to_send)
+    s.sendall(text_to_send.encode())
 
     rec_data = []
     while 1:
         data = s.recv(1024)
         if not data:
             break
-        rec_data.append(data)
+        rec_data.append(data.decode())
 
     s.shutdown(socket.SHUT_WR)
     s.close()
